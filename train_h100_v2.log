@@ -1,0 +1,76 @@
+nohup: ignoring input
+warning: The `tool.uv.dev-dependencies` field (used in `pyproject.toml`) is deprecated and will be removed in a future release; use `dependency-groups.dev` instead
+============================================================
+  Gold STMMT(v1.0) 학습 [H100/CSV] — data/wando_30m_full32_2021_ffilled.zarr
+  device=cuda (NVIDIA H100 80GB HBM3)
+============================================================
+  train: 300샘플 / val: 45샘플
+  patch: 64x64, 채널: 24개
+  파라미터: 3,786,882
+  class_weights 적용: [0.3, 3.0] (몽키패치, st_mmt.py 원본 미수정)
+학습 시작 | device=cuda | params=3,786,882
+Epoch loop 시작
+  [Epoch 1] train 시작...
+  [Epoch 1] val 시작 (train_loss=0.7120)
+  Epoch   1/30 | train=0.7120 | val=0.9033 | lr=9.97e-05 | 31.4s
+  [Epoch 2] train 시작...
+  [Epoch 2] val 시작 (train_loss=0.5961)
+  Epoch   2/30 | train=0.5961 | val=0.5976 | lr=9.89e-05 | 25.7s
+  [Epoch 3] train 시작...
+  [Epoch 3] val 시작 (train_loss=0.5523)
+  Epoch   3/30 | train=0.5523 | val=0.4524 | lr=9.76e-05 | 21.3s
+  [Epoch 4] train 시작...
+  [Epoch 4] val 시작 (train_loss=0.6255)
+  Epoch   4/30 | train=0.6255 | val=0.6745 | lr=9.57e-05 | 21.4s
+  [Epoch 5] train 시작...
+  [Epoch 5] val 시작 (train_loss=0.5944)
+  Epoch   5/30 | train=0.5944 | val=0.6439 | lr=9.34e-05 | 20.5s
+  [Epoch 6] train 시작...
+  [Epoch 6] val 시작 (train_loss=0.4915)
+  Epoch   6/30 | train=0.4915 | val=0.9277 | lr=9.05e-05 | 20.1s
+  [Epoch 7] train 시작...
+  [Epoch 7] val 시작 (train_loss=0.4616)
+  Epoch   7/30 | train=0.4616 | val=0.7573 | lr=8.73e-05 | 20.1s
+  [Epoch 8] train 시작...
+  [Epoch 8] val 시작 (train_loss=0.4119)
+  Epoch   8/30 | train=0.4119 | val=0.9290 | lr=8.36e-05 | 20.0s
+  [Epoch 9] train 시작...
+  [Epoch 9] val 시작 (train_loss=0.4193)
+  Epoch   9/30 | train=0.4193 | val=0.7834 | lr=7.96e-05 | 20.0s
+  [Epoch 10] train 시작...
+  [Epoch 10] val 시작 (train_loss=0.4320)
+  Epoch  10/30 | train=0.4320 | val=1.1056 | lr=7.52e-05 | 20.1s
+  [Epoch 11] train 시작...
+  [Epoch 11] val 시작 (train_loss=0.4287)
+  Epoch  11/30 | train=0.4287 | val=1.0998 | lr=7.06e-05 | 19.9s
+  [Epoch 12] train 시작...
+  [Epoch 12] val 시작 (train_loss=0.4117)
+  Epoch  12/30 | train=0.4117 | val=1.2989 | lr=6.58e-05 | 20.1s
+  [Epoch 13] train 시작...
+  [Epoch 13] val 시작 (train_loss=0.3946)
+  Epoch  13/30 | train=0.3946 | val=1.2995 | lr=6.08e-05 | 20.2s
+  Early stopping at epoch 13
+
+  최종 val F1 (macro): 0.7786
+  최종 val AUC  (ovo): nan
+  평균 추론 지연: 2.8 ms
+
+              precision    recall  f1-score   support
+
+          정상       1.00      0.55      0.71     81920
+          초기       0.74      1.00      0.85    102400
+
+    accuracy                           0.80    184320
+   macro avg       0.87      0.78      0.78    184320
+weighted avg       0.85      0.80      0.79    184320
+
+
+  ✓ 완료 — best_path=checkpoints/gold_v2_binary/best_model.pt
+  최종 지표: {
+  "f1_macro": 0.7785675232367414,
+  "f1_weighted": 0.7862219792236194,
+  "auc_ovo": NaN,
+  "accuracy": 0.8,
+  "avg_latency_ms": 2.8130213419596353,
+  "p95_latency_ms": 2.8613097965717316
+}

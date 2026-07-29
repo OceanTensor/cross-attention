@@ -1,0 +1,30 @@
+nohup: ignoring input
+warning: The `tool.uv.dev-dependencies` field (used in `pyproject.toml`) is deprecated and will be removed in a future release; use `dependency-groups.dev` instead
+============================================================
+  xattn_v2 Hard Negative 가중샘플링 재학습(OHEM) — 자체루프
+  device=cuda (NVIDIA H100 80GB HBM3)
+============================================================
+    지역별(train) 샘플 분포: {128: 300, 135: 300}
+    지역별(val) 샘플 분포: {128: 45, 135: 45}
+  train: 600샘플 / val: 90샘플
+  Hard Negative 가중샘플링 적용: 82개 샘플에 1.5배 가중치
+  파라미터: 9,218,179
+학습 시작 (Hard Negative 가중샘플링, 자체 학습루프)
+  Epoch   1/30 | train=0.3801 | val=0.5090 | lr=1.00e-04
+  Epoch   2/30 | train=0.2324 | val=0.5809 | lr=9.97e-05
+  Epoch   3/30 | train=0.1560 | val=0.5027 | lr=9.89e-05
+  Epoch   4/30 | train=0.1020 | val=0.3487 | lr=9.76e-05
+  Epoch   5/30 | train=0.1346 | val=0.4544 | lr=9.57e-05
+  Epoch   6/30 | train=0.1101 | val=0.5451 | lr=9.33e-05
+  Epoch   7/30 | train=0.0770 | val=0.5858 | lr=9.05e-05
+  Epoch   8/30 | train=0.0804 | val=0.7539 | lr=8.72e-05
+  Epoch   9/30 | train=0.0488 | val=0.7522 | lr=8.35e-05
+  Early stopping at epoch 9
+
+  ✓ 완료 — best_path=checkpoints/xattn_v3_ohem/best_model.pt
+  binary AUC(ROC): 0.8584  PR-AUC(AP): 0.7728
+
+  재현율100% 임계값: 0.481557
+  실제 재현율: 100.00%  정밀도: 75.75%
+  F1(macro): 0.8059
+  confusion_matrix: [[98267, 65573], [0, 204800]]

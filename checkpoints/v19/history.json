@@ -1,0 +1,107 @@
+[
+  {
+    "epoch": 1,
+    "train_loss": 0.5284,
+    "val_loss": 0.975,
+    "lr": 9.972883382072954e-05,
+    "elapsed_s": 64.3
+  },
+  {
+    "epoch": 2,
+    "train_loss": 0.4217,
+    "val_loss": 1.0903,
+    "lr": 9.891830623632339e-05,
+    "elapsed_s": 63.8
+  },
+  {
+    "epoch": 3,
+    "train_loss": 0.379,
+    "val_loss": 0.3727,
+    "lr": 9.757729755661011e-05,
+    "elapsed_s": 64.0
+  },
+  {
+    "epoch": 4,
+    "train_loss": 0.3599,
+    "val_loss": 0.524,
+    "lr": 9.572050015330873e-05,
+    "elapsed_s": 64.4
+  },
+  {
+    "epoch": 5,
+    "train_loss": 0.3237,
+    "val_loss": 0.3478,
+    "lr": 9.336825748732972e-05,
+    "elapsed_s": 64.2
+  },
+  {
+    "epoch": 6,
+    "train_loss": 0.3056,
+    "val_loss": 0.4662,
+    "lr": 9.05463412215599e-05,
+    "elapsed_s": 64.1
+  },
+  {
+    "epoch": 7,
+    "train_loss": 0.2859,
+    "val_loss": 0.3759,
+    "lr": 8.728566886113101e-05,
+    "elapsed_s": 64.3
+  },
+  {
+    "epoch": 8,
+    "train_loss": 0.3203,
+    "val_loss": 0.3877,
+    "lr": 8.362196501476347e-05,
+    "elapsed_s": 63.9
+  },
+  {
+    "epoch": 9,
+    "train_loss": 0.271,
+    "val_loss": 0.5414,
+    "lr": 7.959536998847741e-05,
+    "elapsed_s": 64.0
+  },
+  {
+    "epoch": 10,
+    "train_loss": 0.2881,
+    "val_loss": 0.6462,
+    "lr": 7.524999999999999e-05,
+    "elapsed_s": 64.0
+  },
+  {
+    "epoch": 11,
+    "train_loss": 0.2607,
+    "val_loss": 0.7297,
+    "lr": 7.06334638322521e-05,
+    "elapsed_s": 64.0
+  },
+  {
+    "epoch": 12,
+    "train_loss": 0.2763,
+    "val_loss": 0.5446,
+    "lr": 6.579634122155988e-05,
+    "elapsed_s": 64.0
+  },
+  {
+    "epoch": 13,
+    "train_loss": 0.2763,
+    "val_loss": 0.6309,
+    "lr": 6.079162869547907e-05,
+    "elapsed_s": 64.0
+  },
+  {
+    "epoch": 14,
+    "train_loss": 0.2623,
+    "val_loss": 0.5066,
+    "lr": 5.567415893174884e-05,
+    "elapsed_s": 63.9
+  },
+  {
+    "epoch": 15,
+    "train_loss": 0.2721,
+    "val_loss": 0.8247,
+    "lr": 5.05e-05,
+    "elapsed_s": 63.8
+  }
+]

@@ -1,0 +1,60 @@
+nohup: ignoring input
+warning: The `tool.uv.dev-dependencies` field (used in `pyproject.toml`) is deprecated and will be removed in a future release; use `dependency-groups.dev` instead
+============================================================
+  Gold STMMT 다중타일 학습(v13) — 2개 지역 통합
+  타일: {128: 'data/wando_30m_full32_2021_ffilled_nir_turb_ma_anomMY_nirchg.zarr', 135: 'data/mokpo_30m_full32_2021_ffilled_nir_turb_ma_anomMY_nirchg.zarr'}
+  device=cuda (NVIDIA H100 80GB HBM3)
+============================================================
+  label_csv 매칭: [(128, 'h100_transfer_v19_wando/gold_label.csv'), (135, 'h100_transfer_v19_mokpo/gold_label.csv')]
+    지역별(train) 샘플 분포: {128: 300, 135: 300}
+    지역별(val) 샘플 분포: {128: 45, 135: 45}
+  train: 600샘플 / val: 90샘플
+  patch: 64x64, 채널: 32개
+  파라미터: 7,174,786
+  class_weights 적용: [0.5, 1.5] (몽키패치, st_mmt.py 원본 미수정)
+학습 시작 | device=cuda | params=7,174,786
+Epoch loop 시작
+  [Epoch 1] train 시작...
+  [Epoch 1] val 시작 (train_loss=0.4154)
+  Epoch   1/5 | train=0.4154 | val=0.3827 | lr=9.05e-05 | 70.4s
+  [Epoch 2] train 시작...
+  [Epoch 2] val 시작 (train_loss=0.3210)
+  Epoch   2/5 | train=0.3210 | val=0.4410 | lr=6.58e-05 | 71.4s
+  [Epoch 3] train 시작...
+  [Epoch 3] val 시작 (train_loss=0.3085)
+  Epoch   3/5 | train=0.3085 | val=0.4357 | lr=3.52e-05 | 69.8s
+  [Epoch 4] train 시작...
+  [Epoch 4] val 시작 (train_loss=0.2846)
+  Epoch   4/5 | train=0.2846 | val=0.5538 | lr=1.05e-05 | 69.4s
+  [Epoch 5] train 시작...
+  [Epoch 5] val 시작 (train_loss=0.2797)
+  Epoch   5/5 | train=0.2797 | val=0.4697 | lr=1.00e-06 | 69.7s
+
+  최종 val F1 (macro): 0.8611
+  최종 val AUC  (ovo): nan
+  평균 추론 지연: 6.1 ms
+
+              precision    recall  f1-score   support
+
+          정상       0.91      0.77      0.84    163840
+          초기       0.84      0.94      0.89    204800
+
+    accuracy                           0.87    368640
+   macro avg       0.87      0.86      0.86    368640
+weighted avg       0.87      0.87      0.86    368640
+
+
+  ✓ 완료 — best_path=checkpoints/xattn_v4_test/best_model.pt
+  최종 지표: {
+  "f1_macro": 0.8611056428898277,
+  "f1_weighted": 0.8638337454877978,
+  "auc_ovo": NaN,
+  "accuracy": 0.8654459635416667,
+  "avg_latency_ms": 6.061558146029711,
+  "p95_latency_ms": 6.151995249092579
+}
+
+  보완 계산: 이진 AUC/PR-AUC (auc_ovo NaN 대응)
+/home/tta/gold_wando/gold_train_multitile_xattn_v4.py:241: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(result["best_path"], map_location=device))
+  binary AUC(ROC): 0.9314  PR-AUC(AP):   0.9441  (클래스 불균형 상황엔 이 지표가 더 정보량 많음)

@@ -1,0 +1,30 @@
+warning: The `tool.uv.dev-dependencies` field (used in `pyproject.toml`) is deprecated and will be removed in a future release; use `dependency-groups.dev` instead
+usage: gold_train_stmmt_h100.py [-h] --cube_path CUBE_PATH --sample_csv
+                                SAMPLE_CSV --label_csv LABEL_CSV
+                                [--epochs EPOCHS] [--batch_size BATCH_SIZE]
+                                [--lr LR] [--patch PATCH] [--d_model D_MODEL]
+                                [--n_layers N_LAYERS] [--n_heads N_HEADS]
+                                [--save_dir SAVE_DIR] [--class_weights W0 W1]
+                                [--focal_gamma FOCAL_GAMMA]
+                                [--n_stages N_STAGES]
+gold_train_stmmt_h100.py: error: the following arguments are required: --sample_csv
+warning: The `tool.uv.dev-dependencies` field (used in `pyproject.toml`) is deprecated and will be removed in a future release; use `dependency-groups.dev` instead
+usage: gold_train_stmmt_h100.py [-h] --cube_path CUBE_PATH --sample_csv
+                                SAMPLE_CSV --label_csv LABEL_CSV
+                                [--epochs EPOCHS] [--batch_size BATCH_SIZE]
+                                [--lr LR] [--patch PATCH] [--d_model D_MODEL]
+                                [--n_layers N_LAYERS] [--n_heads N_HEADS]
+                                [--save_dir SAVE_DIR] [--class_weights W0 W1]
+                                [--focal_gamma FOCAL_GAMMA]
+                                [--n_stages N_STAGES]
+gold_train_stmmt_h100.py: error: unrecognized arguments: train_v5.log
+warning: The `tool.uv.dev-dependencies` field (used in `pyproject.toml`) is deprecated and will be removed in a future release; use `dependency-groups.dev` instead
+usage: gold_train_stmmt_h100.py [-h] --cube_path CUBE_PATH --sample_csv
+                                SAMPLE_CSV --label_csv LABEL_CSV
+                                [--epochs EPOCHS] [--batch_size BATCH_SIZE]
+                                [--lr LR] [--patch PATCH] [--d_model D_MODEL]
+                                [--n_layers N_LAYERS] [--n_heads N_HEADS]
+                                [--save_dir SAVE_DIR] [--class_weights W0 W1]
+                                [--focal_gamma FOCAL_GAMMA]
+                                [--n_stages N_STAGES]
+gold_train_stmmt_h100.py: error: unrecognized arguments: train_v8.log

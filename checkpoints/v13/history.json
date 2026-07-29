@@ -1,0 +1,107 @@
+[
+  {
+    "epoch": 1,
+    "train_loss": 0.5677,
+    "val_loss": 0.4277,
+    "lr": 9.972883382072954e-05,
+    "elapsed_s": 64.9
+  },
+  {
+    "epoch": 2,
+    "train_loss": 0.4454,
+    "val_loss": 0.6836,
+    "lr": 9.891830623632339e-05,
+    "elapsed_s": 64.8
+  },
+  {
+    "epoch": 3,
+    "train_loss": 0.3186,
+    "val_loss": 0.5518,
+    "lr": 9.757729755661011e-05,
+    "elapsed_s": 64.8
+  },
+  {
+    "epoch": 4,
+    "train_loss": 0.3282,
+    "val_loss": 0.9706,
+    "lr": 9.572050015330873e-05,
+    "elapsed_s": 64.2
+  },
+  {
+    "epoch": 5,
+    "train_loss": 0.3256,
+    "val_loss": 0.277,
+    "lr": 9.336825748732972e-05,
+    "elapsed_s": 64.1
+  },
+  {
+    "epoch": 6,
+    "train_loss": 0.3431,
+    "val_loss": 0.3247,
+    "lr": 9.05463412215599e-05,
+    "elapsed_s": 64.0
+  },
+  {
+    "epoch": 7,
+    "train_loss": 0.3131,
+    "val_loss": 0.3415,
+    "lr": 8.728566886113101e-05,
+    "elapsed_s": 64.4
+  },
+  {
+    "epoch": 8,
+    "train_loss": 0.3168,
+    "val_loss": 0.419,
+    "lr": 8.362196501476347e-05,
+    "elapsed_s": 63.0
+  },
+  {
+    "epoch": 9,
+    "train_loss": 0.28,
+    "val_loss": 0.443,
+    "lr": 7.959536998847741e-05,
+    "elapsed_s": 63.4
+  },
+  {
+    "epoch": 10,
+    "train_loss": 0.2997,
+    "val_loss": 0.4008,
+    "lr": 7.524999999999999e-05,
+    "elapsed_s": 63.0
+  },
+  {
+    "epoch": 11,
+    "train_loss": 0.265,
+    "val_loss": 0.4639,
+    "lr": 7.06334638322521e-05,
+    "elapsed_s": 63.3
+  },
+  {
+    "epoch": 12,
+    "train_loss": 0.2803,
+    "val_loss": 0.5319,
+    "lr": 6.579634122155988e-05,
+    "elapsed_s": 63.2
+  },
+  {
+    "epoch": 13,
+    "train_loss": 0.2596,
+    "val_loss": 0.4802,
+    "lr": 6.079162869547907e-05,
+    "elapsed_s": 63.4
+  },
+  {
+    "epoch": 14,
+    "train_loss": 0.2562,
+    "val_loss": 0.535,
+    "lr": 5.567415893174884e-05,
+    "elapsed_s": 63.4
+  },
+  {
+    "epoch": 15,
+    "train_loss": 0.2326,
+    "val_loss": 0.5438,
+    "lr": 5.05e-05,
+    "elapsed_s": 63.0
+  }
+]

@@ -1,0 +1,36 @@
+nohup: ignoring input
+warning: The `tool.uv.dev-dependencies` field (used in `pyproject.toml`) is deprecated and will be removed in a future release; use `dependency-groups.dev` instead
+============================================================
+  xattn_v2 Hard Negative 가중샘플링 재학습(OHEM) — 자체루프
+  device=cuda (NVIDIA H100 80GB HBM3)
+============================================================
+    지역별(train) 샘플 분포: {128: 300, 135: 300}
+    지역별(val) 샘플 분포: {128: 45, 135: 45}
+  train: 600샘플 / val: 90샘플
+  Hard Negative 가중샘플링 적용: 109개 샘플에 3.0배 가중치
+  파라미터: 7,768,706
+학습 시작 (Hard Negative 가중샘플링, 자체 학습루프)
+  Epoch   1/30 | train=0.3923 | val=1.2540 | lr=1.00e-04
+  Epoch   2/30 | train=0.2840 | val=1.2593 | lr=9.97e-05
+  Epoch   3/30 | train=0.2969 | val=0.5150 | lr=9.89e-05
+  Epoch   4/30 | train=0.1990 | val=0.2800 | lr=9.76e-05
+  Epoch   5/30 | train=0.1864 | val=0.2693 | lr=9.57e-05
+  Epoch   6/30 | train=0.1151 | val=0.5838 | lr=9.33e-05
+  Epoch   7/30 | train=0.1005 | val=0.5345 | lr=9.05e-05
+  Epoch   8/30 | train=0.1024 | val=0.4921 | lr=8.72e-05
+  Epoch   9/30 | train=0.0956 | val=0.2801 | lr=8.35e-05
+  Epoch  10/30 | train=0.0443 | val=0.2968 | lr=7.94e-05
+  Epoch  11/30 | train=0.0545 | val=0.5003 | lr=7.50e-05
+  Epoch  12/30 | train=0.0316 | val=0.7094 | lr=7.03e-05
+  Epoch  13/30 | train=0.0105 | val=0.6707 | lr=6.55e-05
+  Epoch  14/30 | train=0.0057 | val=1.0481 | lr=6.04e-05
+  Epoch  15/30 | train=0.0101 | val=0.7657 | lr=5.52e-05
+  Early stopping at epoch 15
+
+  ✓ 완료 — best_path=checkpoints/xattn_v2_ohem/best_model.pt
+  binary AUC(ROC): 0.8933  PR-AUC(AP): 0.7971
+
+  재현율100% 임계값: 0.470028
+  실제 재현율: 100.00%  정밀도: 85.12%
+  F1(macro): 0.8985
+  confusion_matrix: [[128035, 35805], [0, 204800]]

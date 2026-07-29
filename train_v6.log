@@ -1,0 +1,76 @@
+nohup: ignoring input
+warning: The `tool.uv.dev-dependencies` field (used in `pyproject.toml`) is deprecated and will be removed in a future release; use `dependency-groups.dev` instead
+============================================================
+  Gold STMMT(v1.0) 학습 [H100/CSV] — data/wando_30m_full32_2021_ffilled_ma_mld_nir.zarr
+  device=cuda (NVIDIA H100 80GB HBM3)
+============================================================
+  train: 300샘플 / val: 45샘플
+  patch: 64x64, 채널: 29개
+  파라미터: 3,807,362
+  class_weights 적용: [0.5, 1.5] (몽키패치, st_mmt.py 원본 미수정)
+학습 시작 | device=cuda | params=3,807,362
+Epoch loop 시작
+  [Epoch 1] train 시작...
+  [Epoch 1] val 시작 (train_loss=0.5262)
+  Epoch   1/30 | train=0.5262 | val=0.4157 | lr=9.97e-05 | 32.6s
+  [Epoch 2] train 시작...
+  [Epoch 2] val 시작 (train_loss=0.4817)
+  Epoch   2/30 | train=0.4817 | val=0.4873 | lr=9.89e-05 | 23.1s
+  [Epoch 3] train 시작...
+  [Epoch 3] val 시작 (train_loss=0.3410)
+  Epoch   3/30 | train=0.3410 | val=0.5749 | lr=9.76e-05 | 21.8s
+  [Epoch 4] train 시작...
+  [Epoch 4] val 시작 (train_loss=0.2511)
+  Epoch   4/30 | train=0.2511 | val=0.9535 | lr=9.57e-05 | 21.7s
+  [Epoch 5] train 시작...
+  [Epoch 5] val 시작 (train_loss=0.2554)
+  Epoch   5/30 | train=0.2554 | val=0.6337 | lr=9.34e-05 | 21.5s
+  [Epoch 6] train 시작...
+  [Epoch 6] val 시작 (train_loss=0.2516)
+  Epoch   6/30 | train=0.2516 | val=0.9593 | lr=9.05e-05 | 21.7s
+  [Epoch 7] train 시작...
+  [Epoch 7] val 시작 (train_loss=0.2640)
+  Epoch   7/30 | train=0.2640 | val=1.0418 | lr=8.73e-05 | 21.7s
+  [Epoch 8] train 시작...
+  [Epoch 8] val 시작 (train_loss=0.2410)
+  Epoch   8/30 | train=0.2410 | val=0.6993 | lr=8.36e-05 | 21.8s
+  [Epoch 9] train 시작...
+  [Epoch 9] val 시작 (train_loss=0.2312)
+  Epoch   9/30 | train=0.2312 | val=1.0872 | lr=7.96e-05 | 21.9s
+  [Epoch 10] train 시작...
+  [Epoch 10] val 시작 (train_loss=0.2539)
+  Epoch  10/30 | train=0.2539 | val=1.2493 | lr=7.52e-05 | 21.9s
+  [Epoch 11] train 시작...
+  [Epoch 11] val 시작 (train_loss=0.2289)
+/home/tta/gold_wando/gold_train_stmmt_h100.py:215: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(result["best_path"], map_location=device))
+  Epoch  11/30 | train=0.2289 | val=0.5282 | lr=7.06e-05 | 21.6s
+  Early stopping at epoch 11
+
+  최종 val F1 (macro): 0.7934
+  최종 val AUC  (ovo): nan
+  평균 추론 지연: 2.7 ms
+
+              precision    recall  f1-score   support
+
+          정상       1.00      0.58      0.73     81920
+          초기       0.75      1.00      0.86    102400
+
+    accuracy                           0.81    184320
+   macro avg       0.87      0.79      0.79    184320
+weighted avg       0.86      0.81      0.80    184320
+
+
+  ✓ 완료 — best_path=checkpoints/v6/best_model.pt
+  최종 지표: {
+  "f1_macro": 0.793394594827312,
+  "f1_weighted": 0.8002635071694247,
+  "auc_ovo": NaN,
+  "accuracy": 0.8118923611111111,
+  "avg_latency_ms": 2.738129890834292,
+  "p95_latency_ms": 2.756577916443348
+}
+
+  보완 계산: 이진 AUC/PR-AUC (auc_ovo NaN 대응)
+  binary AUC(ROC): 0.9270
+  PR-AUC(AP):      0.9284  (클래스 불균형 상황엔 이 지표가 더 정보량 많음)
